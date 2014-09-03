@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/main_section1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/main_votes_image1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/main_image1"
+            android:background="@color/translucent_black"
+            android:gravity="center"
+            android:paddingBottom="15dip"
+            android:paddingTop="15dip"
+            android:text="72%"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/main_stamp_image1"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/like_stamp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/main_image1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/imageview_background"
+            android:padding="8dip" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#303233"
+        android:gravity="center"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/main_section2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/main_votes_image2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/main_image2"
+            android:background="@color/translucent_black"
+            android:gravity="center"
+            android:paddingBottom="15dip"
+            android:paddingTop="15dip"
+            android:text="28%"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/main_stamp_image2"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/like_stamp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/main_image2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/imageview_background"
+            android:padding="8dip" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="cropHeight">70dip</dimen>
+	
+	 <dimen name="color_picker_height">110dp</dimen>
+    <dimen name="color_picker_width">10dp</dimen>
+    <dimen name="color_selector_width">10dp</dimen>
+    <dimen name="picker_selector_spacing">50dp</dimen>
+</resources>

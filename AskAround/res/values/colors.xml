@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="cacheColorHint">#00000000</color>
+	<color name="imageview_background">#303233</color>
+	<color name="translucent_black">#20000000</color> 
+</resources>

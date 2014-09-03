@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/photoDetail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_crop"
+    android:orientation="vertical" >
+
+    <!-- Top navigation bar -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:background="@drawable/title_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/back_button"
+            style="@style/actionBarText"
+            android:layout_width="80dip"
+            android:gravity="center"
+            android:text="@string/Back" />
+
+        <View
+            android:id="@+id/firstDivider"
+            style="@style/titlebarDivider" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/actionBarTitle"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <View
+            android:id="@+id/secondDivider"
+            style="@style/titlebarDivider" />
+
+        <TextView
+            android:id="@+id/next_button"
+            style="@style/actionBarText"
+            android:layout_width="80dip"
+            android:gravity="center"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <!-- Photo and sliding drawer container -->
+
+    <RelativeLayout
+        android:id="@+id/dragLayoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@color/transparent" >
+
+        <com.radiumone.effects_sdk.DragLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent" />
+
+        <com.radiumone.effects_sdk.ViaSlidingDrawer
+            android:id="@+id/drawer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent"
+            android:content="@+id/content"
+            android:handle="@+id/handle"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@id/handle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/handle"
+                android:src="@drawable/pulldown" />
+
+            <HorizontalScrollView
+                android:id="@id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_filterbuttons"
+                android:fillViewport="true" />
+        </com.radiumone.effects_sdk.ViaSlidingDrawer>
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" >
+
+            <com.radiumone.effects_sdk.ColorPicker
+                android:id="@+id/colorPicker1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <!-- Sticker/filter/border/text selection containers and tabs -->
+
+    <LinearLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:contentDescription="@string/effects_options"
+        android:orientation="vertical" >
+
+        <!-- Sticker/filter/border/text option containers -->
+
+        <ViewFlipper
+            android:id="@+id/tabSwitcher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dip"
+            android:background="@color/transparent" >
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/transparent" >
+
+                <LinearLayout
+                    android:id="@+id/layoutStickerButtons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/transparent"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/transparent" >
+
+                <LinearLayout
+                    android:id="@+id/layoutFilterButtons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/transparent"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/transparent" >
+
+                <LinearLayout
+                    android:id="@+id/borderButtons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/transparent"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/transparent" >
+
+                <LinearLayout
+                    android:id="@+id/layoutTextButtons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/transparent"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+            
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/transparent" >
+
+                <LinearLayout
+                    android:id="@+id/layoutDrawButtons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/transparent"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+        </ViewFlipper>
+
+        <!-- Sticker/filter/border/text tabs -->
+
+        <LinearLayout
+            android:id="@+id/tabsBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/stickersBackground"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/stickers"
+                    style="@style/applyFilterButton"
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="left"
+                    android:background="@drawable/btn_stickers"
+                    android:contentDescription="@string/stickers_effects" />
+
+               <View style="@style/titlebarDivider"
+                    android:layout_width="2dip" /> 
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/filtersBackground"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+               <ImageView
+                    android:id="@+id/filters"
+                    style="@style/applyFilterButton"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/btn_filter"
+                    android:contentDescription="@string/filters_effects" />
+
+                <View
+                    style="@style/titlebarDivider"
+                    android:layout_width="2dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bordersBackground"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/borders"
+                    style="@style/applyFilterButton"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/btn_borders"
+                    android:contentDescription="@string/borders_effects" />
+
+            <View style="@style/titlebarDivider"
+               	 android:layout_width="2dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/textBackground"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/text"
+                    style="@style/applyFilterButton"
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="right"
+                    android:background="@drawable/btn_text"
+                    android:contentDescription="@string/text_effects" />
+
+               <View style="@style/titlebarDivider"
+                   android:layout_width="2dip" /> 
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/drawBackground"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/draw"
+                    style="@style/applyFilterButton"
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="right"
+                    android:background="@drawable/btn_draw"
+                    android:contentDescription="@string/draw_effects" />
+	
+                <View style="@style/titlebarDivider"
+                  	  android:layout_width="2dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
